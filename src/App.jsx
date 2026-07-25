@@ -199,14 +199,6 @@ export default function UsuarioApp() {
         </button>
       </div>
 
-      {/* Filtro de recorridos */}
-      <div style={{ padding: "10px 12px", background: "#111118", borderBottom: "1px solid rgba(255,255,255,0.05)", display: "flex", gap: 8, overflowX: "auto", zIndex: 1000 }}>
-        <button onClick={() => setSelectedRoute(null)} style={{ padding: "6px 14px", borderRadius: 20, border: "none", flexShrink: 0, background: !selectedRoute ? "#fff" : "rgba(255,255,255,0.07)", color: !selectedRoute ? "#000" : "rgba(255,255,255,0.5)", fontSize: 11, fontWeight: 600, cursor: "pointer", letterSpacing: 1 }}>TODOS</button>
-        {rutas.map(r => (
-          <button key={r.id} onClick={() => setSelectedRoute(r.id === selectedRoute ? null : r.id)} style={{ padding: "6px 14px", borderRadius: 20, flexShrink: 0, border: `1px solid ${selectedRoute === r.id ? r.color : "rgba(255,255,255,0.1)"}`, background: selectedRoute === r.id ? `${r.color}22` : "transparent", color: selectedRoute === r.id ? r.color : "rgba(255,255,255,0.4)", fontSize: 11, cursor: "pointer", whiteSpace: "nowrap" }}>{r.nombre}</button>
-        ))}
-      </div>
-
       {/* Mapa */}
       <div style={{ flex: 1, position: "relative" }}>
         <MapContainer key="main-map" center={[9.9281, -84.0907]} zoom={13} style={{ height: "100%", width: "100%" }} zoomControl={false}>
