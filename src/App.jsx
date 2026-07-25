@@ -215,11 +215,10 @@ export default function UsuarioApp() {
           {filteredVehiculos.map(v => (
             <Marker key={v.bus_id} position={[v.lat, v.lng]} icon={vehicleIcon(getRutaColor(v.ruta_id))}>
               <Popup>
-                <div style={{ minWidth: 160 }}>
-                  <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 4 }}>{v.bus_id}</div>
-                  <div style={{ color: "#555", fontSize: 12, marginBottom: 4 }}>{v.ruta_nombre}</div>
-                  <div style={{ fontSize: 12 }}>{v.velocidad || 0} km/h</div>
-                  <div style={{ fontSize: 11, color: "#999", marginTop: 4 }}>{formatAgo(v.created_at)}</div>
+                <div style={{ minWidth: 140 }}>
+                  <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>{v.bus_id}</div>
+                  <div style={{ fontSize: 12, color: "#22c55e", marginBottom: 4 }}>● Activo · {v.velocidad || 0} km/h</div>
+                  <div style={{ fontSize: 11, color: "#999" }}>{formatAgo(v.created_at)}</div>
                 </div>
               </Popup>
             </Marker>
