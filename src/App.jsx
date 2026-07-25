@@ -202,7 +202,7 @@ export default function UsuarioApp() {
       {/* Mapa */}
       <div style={{ flex: 1, position: "relative" }}>
         <MapContainer key="main-map" center={[9.9281, -84.0907]} zoom={13} style={{ height: "100%", width: "100%" }} zoomControl={false}>
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; OpenStreetMap contributors' />
+          <TileLayer url="https://api.mapbox.com/styles/v1/mapbox/streets-v12/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmFla3NlanUiLCJhIjoiY21zMG9hcjNuMTJ5MzM1cHdjamhjNG1lYiJ9.s3xvHRmoM3GTCKlSSqcPSA" attribution='attribution='&copy; OpenStreetMap contributors'copy; Mapbox attribution='&copy; OpenStreetMap contributors'copy; OpenStreetMap' tileSize={512} zoomOffset={-1} />
           <RecenterMap coords={recenter !== false ? (userPos || null) : null} />
 
           {userPos && (
